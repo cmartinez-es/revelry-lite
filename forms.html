@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Title of the Page - Description of the Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Carlos Martinez, carlos, martinez, cmartinez, cmartinez.es, diseno, diseno web, web design, portfolio, web, website designer, website, html, xhtml, css, jquery, javascript, php, photoshop, html5, css3, madrid, spain, espana, graphic, grafico, diseno grafico, graphic design, visual, visual designer, ui, ux, user interface, user experience" />
+  <meta name="description" content="Description of the Page" />
+  <meta name="author" content="Carlos Martinez" />
+  <meta name="dcterms.rightsHolder" content="Carlos Martinez" />
+  <meta name="dcterms.rights" content="All rights reserved" />
+  <meta name="dcterms.dateCopyrighted" content="2013" />
+  <meta name="robots" content="all" />
+  <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="stylesheets/normalize.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png" />
+</head>
+<body>
+  <header>
+    <h1 role="banner"><a href="index.html" title="Index">Title of the Page</a></h1>
+    <h2>Description of the Page</h2>
+    <nav role="navigation">
+      <ul>
+        <li><a href="typography.html" title="Typography">Typography</a></li>
+        <li><a href="layout.html" title="Layout">Layout</a></li>
+        <li><a href="forms.html" title="Forms" class="current">Forms</a></li>
+        <li><a href="blog.html" title="Blog">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main role="main">
+    <form id="dummy" action="" method="post">
+      <fieldset>
+        <legend>Simple sample form</legend>
+        <label for="dummy0">Text input </label>
+        <input type="text" name="dummy0" id="dummy0" value="Field with class .large">
+        <label for="dummy1">Text input (small)</label>
+        <input type="text" id="dummy1" name="dummy1" value="Field with class .small">
+        <label for="dummy2">Textarea</label>
+        <textarea name="dummy2" id="dummy2" rows="5" cols="20"></textarea>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </fieldset>
+    </form>
+      <fieldset>
+        <legend>Select, checkboxes, lists</legend>
+
+        <label for="dummy3">Select field</label>
+
+          <select id="dummy3" name="dummy3">
+            <option value="1">Madrid</option>
+            <option value="2">Barcelona</option>
+            <option value="3">Valencia</option>
+          </select>
+
+        <label for="dummy4">Select with groups</label>
+
+          <select id="dummy4" name="dummy4">
+            <option>Mascota Favorita</option>
+            <optgroup label="mamiferos">
+              <option>perro</option>
+              <option>gato</option>
+              <option>conejo</option>
+              <option>horse</option>
+
+            </optgroup>
+            <optgroup label="reptiles">
+              <option>iguana</option>
+              <option>serpiente</option>
+            </optgroup>
+          </select>
+
+          <label>Radio buttons</label>
+            <input type="radio" name="example"> Radio one
+            <input type="radio" name="example"> Radio two
+            <input type="radio" name="example"> Radio three
+
+          <label>Checkboxes</label>
+            <input type="checkbox"> Check one
+            <input type="checkbox"> Check two
+            <input type="checkbox"> Check three
+      </fieldset>
+      <button class="purple btn">
+          Button
+      </button>
+      <a class="blue btn" href="#">
+          Start Now!
+      </a>
+      <a class="green btn" href="#">
+        Order
+      </a>
+    <input type="submit" class="orange btn">
+    <input type="submit" class="mint btn">
+    <input type="submit" class="fucsia btn">
+  </main>
+  <footer role="contentinfo">
+    <address><p>Title of the Page - 2013 © <a href="mailto:mail@yourmail.com" title="Email">Email Me</a> | <a href="index.html" title="Index">Title of the Page</a></p></address>
+  </footer>
+</body>
+</html>

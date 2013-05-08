@@ -1,0 +1,71 @@
+/* line 1, ../sass/print.scss */
+* {
+  background: transparent !important;
+  color: #000 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+/* line 9, ../sass/print.scss */
+a,
+a:visited {
+  text-decoration: underline;
+}
+
+/* line 13, ../sass/print.scss */
+a[href]:after {
+  content: " (" attr(href) ")";
+}
+
+/* line 17, ../sass/print.scss */
+abbr[title]:after {
+  content: " (" attr(title) ")";
+}
+
+/* line 23, ../sass/print.scss */
+.ir a:after,
+a[href^="javascript:"]:after,
+a[href^="#"]:after {
+  content: "";
+}
+
+/* line 28, ../sass/print.scss */
+pre,
+blockquote {
+  border: 1px solid #999;
+  page-break-inside: avoid;
+}
+
+/* line 33, ../sass/print.scss */
+thead {
+  display: table-header-group;
+}
+
+/* line 38, ../sass/print.scss */
+tr,
+img {
+  page-break-inside: avoid;
+}
+
+/* line 42, ../sass/print.scss */
+img {
+  max-width: 100% !important;
+}
+
+@page {
+  margin: 0.5cm;
+}
+
+/* line 52, ../sass/print.scss */
+p,
+h2,
+h3 {
+  orphans: 3;
+  widows: 3;
+}
+
+/* line 58, ../sass/print.scss */
+h2,
+h3 {
+  page-break-after: avoid;
+}

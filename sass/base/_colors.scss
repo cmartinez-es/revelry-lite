@@ -1,0 +1,135 @@
+$c1_complementario: complement($c1);
+$c1_l10: lighten( $c1, 10% );
+$c1_l20: lighten( $c1, 20% );
+$c1_d10: darken( $c1, 10% );
+$c1_d20: darken( $c1, 20% );
+$c1_complementario_l10: lighten(complement( $c1), 10% );
+$c1_complementario_l20: lighten(complement( $c1), 20% );
+$c1_complementario_d10: darken(complement( $c1), 10% );
+$c1_complementario_d20: darken(complement( $c1), 20% );
+
+$equalized: hsl(hue($c1), 100%, 50%);
+
+$mono-darker: darken($equalized, 20%);
+$mono-lighter: lighten($equalized, 20%);
+
+$complimentary: complement($equalized);
+
+$analogous: 22.57;
+$analogous-a: adjust-hue($c1, $analogous);
+$analogous-b: adjust-hue($c1, $analogous * -1);
+$analogous-a-e: adjust-hue($equalized, $analogous);
+$analogous-b-e: adjust-hue($equalized, $analogous * -1);
+$analogous-a-custom: hsl(hue($c1) + $analogous, 35.29%, 86.66%);
+$analogous-b-custom: hsl(hue($c1) - $analogous, 35.29%, 86.66%);
+
+$split-comp: 22.57;
+$split-comp-a: adjust-hue(complement($c1), $split-comp);
+$split-comp-b: adjust-hue(complement($c1), $split-comp * -1);
+$split-comp-a-e: adjust-hue(complement($equalized), $split-comp);
+$split-comp-b-e: adjust-hue(complement($equalized), $split-comp * -1);
+
+$triad: 120;
+$triad-pos: adjust-hue($c1, $triad);
+$triad-neg: adjust-hue($c1, $triad * -1);
+$triad-pos-e: adjust-hue($equalized, $triad);
+$triad-neg-e: adjust-hue($equalized, $triad * -1);
+
+$rectangle: 22.57;
+$rectangle-a: complement($c1);
+$rectangle-b: adjust-hue($c1, $rectangle);
+$rectangle-c: complement($rectangle-b);
+$rectangle-a-e: complement($equalized);
+$rectangle-b-e: adjust-hue($equalized, $rectangle);
+$rectangle-c-e: complement($rectangle-b-e);
+
+$square-a: complement($c1);
+$square-b: adjust-hue($c1, 90);
+$square-c: complement($square-b);
+$square-a-e: complement($equalized);
+$square-b-e: adjust-hue($equalized, 90);
+$square-c-e: complement($square-b-e);
+
+$compound-adjust-a: 17;
+$compound-adjust-b: 120;
+$compound-adjust-c: 99;
+$compound-a: adjust-hue($c1, $compound-adjust-a);
+$compound-b: adjust-hue($c1, $compound-adjust-b);
+$compound-c: adjust-hue($c1, $compound-adjust-c);
+$compound-a-e: adjust-hue($equalized, $compound-adjust-a);
+$compound-b-e: adjust-hue($equalized, $compound-adjust-b);
+$compound-c-e: adjust-hue($equalized, $compound-adjust-c);
+
+.a {
+  background-color: $a;
+  display: block;
+  float: left;
+  height: 40px;
+  width: 40px;
+}
+
+.a_h {
+  background-color: $a_h;
+  display: block;
+  float: left;
+  height: 40px;
+  width: 40px;
+}
+
+.c1 {
+  background-color: $c1;
+  display: block;
+  float: left;
+  height: 40px;
+  width: 40px;
+}
+
+.c1_b {
+  border: 2px solid $c1_border;
+  background-color: $c1;
+  display: block;
+  float: left;
+  height: 40px;
+  width: 40px;
+}
+
+.c1_c {
+  background-color: $c1_complementario;
+  display: block;
+  float: left;
+  height: 40px;
+  width: 40px;
+}
+
+.c2 {
+  background-color: $c2;
+  display: block;
+  float: left;
+  height: 40px;
+  width: 40px;
+}
+
+.c2_b {
+  border: 2px solid $c2_border;
+  background-color: $c2;
+  display: block;
+  float: left;
+  height: 40px;
+  width: 40px;
+}
+
+.e {
+  background-color: $equalized;
+  display: block;
+  float: left;
+  height: 40px;
+  width: 40px;
+}
+
+.t {
+  background-color: $triad-pos;
+  display: block;
+  float: left;
+  height: 40px;
+  width: 40px;
+}

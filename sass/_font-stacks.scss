@@ -1,0 +1,34 @@
+@import "compass/css3/font-face";
+
+@include font-face('My Font Name',
+  font-files(
+    'fontName.woff', woff,
+    'fontName.ttf', ttf,
+    'fontName.svg', svg),
+    'fontName.eot');
+
+%myfont {
+  font-family: 'My Font Name', sans-serif;
+}
+
+%font-stack-brand {
+  font-family: Futura, "Century Gothic", "Apple Gothic", FreeSans, sans-serif;
+}
+
+%font-stack-headers {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
+  font-style: normal;
+}
+
+%font-stack-body {
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  font-weight: 300;
+}
+
+%font-stack-code {
+  font-family: Consolas, Menlo, "inconsolata", Monaco, "Courier New", Courier, 'Nimbus Mono L', FreeMono, monospace;
+}
+
+%font-stack-icons {
+  font-family: monospace;
+}

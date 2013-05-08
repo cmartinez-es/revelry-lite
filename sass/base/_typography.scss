@@ -1,0 +1,31 @@
+@mixin font-size($size, $line-height:$doc-line-height) {
+    font-size: 0px + $size;
+    font-size: $size / $doc-font-size +rem;
+    line-height: round($line-height / $size*10000) / 10000;
+    margin-bottom: 0px + $line-height;
+    margin-bottom: ($line-height / $doc-font-size)+rem ;
+}
+
+@mixin font-size-2($sizeValue: 1.6){
+  font-size: ($sizeValue * 10) + px;
+  font-size: (($sizeValue * 10) / $doc-font-size)  + rem;
+}
+
+@mixin rem($property, $px-values) {
+  $baseline-rem: $doc-font-size / 1rem;
+  #{$property}: $px-values;
+  @if type-of($px-values) == "number" {
+    #{$property}: $px-values / $baseline-rem; }
+  @else {
+    $rem-values: unquote("");
+    @each $value in $px-values {
+      @if $value == 0 or type-of($value) == "string" or type-of($value) == "color" {
+        $rem-values: append($rem-values, $value); }
+      @else {
+        $rem-values: append($rem-values, $value / $baseline-rem); } }
+    #{$property}: $rem-values; } }
+
+
+@function em($pixels, $context: $doc-font-size) {
+  @return #{$pixels/$context}em
+}

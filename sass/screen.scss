@@ -1,0 +1,127 @@
+$doc-font-size:16;
+$doc-line-height:24;
+
+$bg_c: #f4f4f5;
+$bodytext: #333333;
+$c1: #a1c32c !default;
+$c1_border: #7e9822;
+$c2: #333333;
+$c2_border: #444444;
+$a: #879aa9;
+$a_h: #6a8193;
+$c_selection: #5cc9e8;
+$wh: #FFFFFF;
+$wh_border: #e0e5e9;
+$bl: #000000;
+
+@import "compass";
+@import "base/helpers";
+@import "base/layout";
+@import "base/typography";
+@import "base/colors";
+@import "base/buttons";
+@import "font-stacks";
+//@import "sprites";
+
+html,
+button,
+input,
+select,
+textarea {
+    color: $bodytext;
+    @extend %font-stack-body;
+}
+
+body {
+    margin-top: 0px + $doc-line-height; /* just for test purposes */
+    font-size: 0px + $doc-font-size;
+}
+
+h1,h2,h3,h4,h5,h6 { text-rendering: optimizeLegibility; }
+html { -webkit-font-smoothing: antialiased; }
+
+a {
+   color: $a;
+   &:link { color: $a; }
+   &:hover { color: $a_h; }
+   &:visited { color: $bodytext; }
+}
+
+h1, h2, h3, h4, h5, h6, blockquote, iframe, label, p, pre, address, td, th, ul, ol, dl, dd, hr,
+table, small { margin-top: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  @extend %font-stack-headers;
+}
+
+h1 {
+    @include font-size(32);
+}
+
+h2 {
+    @include font-size(24);
+}
+
+h3 {
+    @include font-size(22, 24);
+}
+
+h4 {
+    @include font-size(20, 24);
+}
+
+blockquote, h5, h6, iframe, label, p, pre, address, td, th, ul, ol, dl, dd, hr,
+table, legend, fieldset {
+    @include font-size(16, 24);
+}
+
+pre, code {
+    @extend %font-stack-code;
+}
+
+small {
+    @include font-size(14, 24);
+}
+
+span.dropcap {
+  font-size: 400%;
+  font-weight: bold;
+  float: left;
+  position: relative;
+  margin:10px 7px 0 0;
+  line-height: 0.7em;
+  @extend %font-stack-headers;
+}
+
+span.amp {
+  font-family:Baskerville,"Goudy Old Style","Palatino","Book Antiqua",serif;
+  font-size:110%;
+  font-style:italic;
+}
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], select {
+ background: $wh;
+ border: 1px solid #cccccc;
+ padding: 4px 6px;
+ vertical-align: middle;
+ outline: none;
+ border-radius: 3px;
+ -moz-border-radius: 3px;
+ -webkit-border-radius: 3px;
+ transition: border linear 0.4s, box-shadow linear 0.4s;
+ -o-transition: border linear 0.4s, box-shadow linear 0.4s;
+ -moz-transition: border linear 0.4s, box-shadow linear 0.4s;
+ -webkit-transition: border linear 0.4s, box-shadow linear 0.4s;
+ margin: 0;
+ max-width: 33%;
+ width: 100%;
+ display: block;
+ }
+
+ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="email"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="url"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, textarea:focus, select:focus{
+ border: 1px solid;
+ border-color: rgba(82, 168, 236, 0.8);
+ box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(81, 168, 236, 0.5);
+ -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(81, 168, 236, 0.5);
+ -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(81, 168, 236, 0.5);
+ }

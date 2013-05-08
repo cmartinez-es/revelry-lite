@@ -1,0 +1,172 @@
+%clearfix {
+  *zoom: 1;
+  &:after {
+    clear: both;
+  }
+  &:before,&:after{
+    content: " ";
+    display: table;
+  }
+}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+::-moz-selection {
+  background: $c_selection;
+  color: $wh;
+  text-shadow: none;
+}
+
+::selection {
+  background: $c_selection;
+  color: $wh;
+  text-shadow: none;
+}
+
+img::selection {
+  background: transparent;
+}
+img::-moz-selection {
+  background: transparent;
+}
+
+body {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ABAA9A;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.divider {
+ border-top: 1px solid #ABAA9A;
+ clear: both;
+}
+
+ img {
+  vertical-align: middle;
+}
+
+ fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+ textarea {
+  resize: vertical;
+}
+
+.invisible {
+ visibility: hidden;
+}
+
+.hidden {
+ display: none !important;
+ visibility: hidden;
+}
+
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+  &:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+  }
+}
+
+.box {
+ position:relative;
+}
+
+.box:after {
+ position:absolute;
+ right:10px;
+ bottom:0;
+ left:10px;
+ height:20px;
+ border-radius:0 0 50% 50% / 0 0 20px 20px;
+ box-shadow:0 10px 10px rgba(0, 0, 0, 0.5);
+ content:'';
+}
+
+.box-content {
+ position:relative;
+ z-index:1;
+ padding:10px;
+ background:#fff;
+}
+
+.list-inline {
+ display: inline-block;
+ zoom: 1;
+ *display: inline;
+}
+
+%ellipsis {
+ overflow: hidden;
+ white-space: nowrap;
+ text-overflow: ellipsis;
+}
+
+.ellipsis {
+ @extend %ellipsis;
+}
+
+%word-wrap {
+ -ms-word-break: break-all;
+ word-break: break-all;
+ word-break: break-word;
+ -webkit-hyphens: auto;
+ -moz-hyphens: auto;
+ hyphens: auto;
+}
+
+.word-wrap {
+ @extend %word-wrap;
+}
+
+@mixin hoverActiveFocus($property, $value) {
+    &:hover, &:active, &:focus {
+        #{$property}: $value;
+    }
+}
+
+@mixin hoverActiveFocus {
+    &:hover, &:active, &:focus {
+        @content;
+    }
+}
+
+@mixin box-emboss($opacity, $opacity2){
+    box-shadow:white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
+}
+
+@mixin letterpress($opacity){
+    text-shadow:white($opacity) 0 1px 0;
+}

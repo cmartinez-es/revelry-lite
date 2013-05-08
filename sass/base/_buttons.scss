@@ -1,0 +1,64 @@
+$purple: #9A68C7;
+$blue: #3BA9E4;
+$green: #75B343;
+$orange: #FF6A42;
+$mint: #9DE0AD;
+$fucsia: #FE4365;
+
+$off-wht: rgba(white,.4);
+
+@mixin btn-theme($btn-color) {
+  border-color: darken($btn-color, 20%);
+  background-color: $btn-color;
+  &:hover, &:focus {
+    background-color: darken($btn-color, 6%);
+    box-shadow: 0 .125rem $off-wht, inset 0 .063rem $off-wht, inset 0 -.188rem lighten($btn-color, 2%);
+  }
+  &:active {
+    box-shadow: 0 .063rem $off-wht, inset 0 0 1.094rem darken($btn-color, 40%), inset 0 .063rem darken($btn-color, 20%),inset 0 -0.188rem darken($btn-color, 20%);
+  }
+}
+
+@mixin trans($val...) {
+  -webkit-transition: $val;
+  -moz-transition: $val;
+  -o-transition: $val;
+  transition: $val;
+}
+
+.btn {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: .938rem 1.875rem;
+  border: .094rem solid;
+  border-radius: .625rem;
+  box-shadow: 0 .375rem .313rem -.313rem rgba(black,.8), inset 0 .063rem $off-wht, inset 0 -.188rem rgba(black,.15);
+  color: #FFF;
+  font: bold 1rem Arial, sans-serif;
+  letter-spacing: .050rem;
+  @include trans(0.2s ease-in-out);
+  text: {
+    decoration: none;
+    shadow: 0 .063rem rgba(black,.3);
+  }
+  cursor: pointer;
+}
+
+.purple {
+  @include btn-theme($purple);
+}
+.blue {
+  @include btn-theme($blue);
+}
+.green {
+  @include btn-theme($green);
+}
+.orange {
+  @include btn-theme($orange);
+}
+.mint {
+  @include btn-theme($mint);
+}
+.fucsia {
+  @include btn-theme($fucsia);
+}

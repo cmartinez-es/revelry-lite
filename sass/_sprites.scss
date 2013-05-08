@@ -1,0 +1,24 @@
+@import "icons/*.png";
+
+@mixin sprite_css($name) {
+  @include icons-sprite($name);
+  height: icons-sprite-height($name);
+  width: icons-sprite-width($name);
+}
+
+.facebook {
+  @include sprite_css(facebook);
+}
+
+.twitter {
+  @include sprite_css(twitter);
+}
+
+.bnl {
+  @include sprite_css(button_next_left);
+}
+
+.bnr {
+  padding: 5px 10px;
+  @include sprite_css(button_next_right);
+}
